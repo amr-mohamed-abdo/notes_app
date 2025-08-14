@@ -1,15 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:notes_app/views/home_screen.dart';
+import 'package:notes_app/screens/home_screen.dart';
 
 void main() {
-  runApp(const MyAPP());
+  runApp(const MyApp());
 }
 
-class MyAPP extends StatelessWidget {
-  const MyAPP({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(debugShowCheckedModeBanner: false, darkTheme: ThemeData.dark(), home: HomeView());
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      darkTheme: ThemeData(
+        scaffoldBackgroundColor: Color(0xff383838),
+        fontFamily: 'Poppins',
+      ),
+      home: HomeScreen(),
+    );
   }
 }
